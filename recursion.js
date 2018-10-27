@@ -1,17 +1,18 @@
-module.exports = recursion = (obj) =>{
-    const result=[];
-    deepth=0;
-    const recFinder=(obj,deepth)=>{
-        if(!result[deepth]){
-            result[deepth]=[];
-        }
-        result[deepth].push(obj.value);
-        if(!obj.left && !obj.right){
-            return result;
-        }
-        recFinder(obj.left,deepth+1);
-        recFinder(obj.right,deepth+1);
-        return result;
-    };
-    return recFinder(obj,deepth);
+const recursion = (obj) => {
+  const result = [];
+  const deepth = 0;
+  const recFinder = (object, deep) => {
+    if (!result[deep]) {
+      result[deep] = [];
+    }
+    result[deep].push(object.value);
+    if (!object.left && !object.right) {
+      return result;
+    }
+    recFinder(object.left, deep + 1);
+    recFinder(object.right, deep + 1);
+    return result;
+  };
+  return recFinder(obj, deepth);
 };
+module.exports = recursion;
