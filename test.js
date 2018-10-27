@@ -1,3 +1,4 @@
+/* global it, describe */
 const assert = require('assert');
 const make = require('./make');
 const sumOfOther = require('./sumOfOther');
