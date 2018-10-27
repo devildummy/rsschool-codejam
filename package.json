@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/devildummy/rsschool-codejam/issues"
   },
-  "homepage": "https://github.com/devildummy/rsschool-codejam#readme"
+  "homepage": "https://github.com/devildummy/rsschool-codejam#readme",
+  "dependencies": {
+    "eslint": "^5.8.0",
+    "eslint-plugin-json": "^1.2.1"
+  }
 }
