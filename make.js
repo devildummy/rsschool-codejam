@@ -4,6 +4,9 @@ const make = (...args) => {
     if (arg[0] instanceof Function) {
       return store.reduce(arg[0]);
     }
+    if (arg[0] === undefined) {
+      return 0;
+    }
     arg.forEach((item) => {
       store.push(item);
     });
